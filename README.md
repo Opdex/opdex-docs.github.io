@@ -1,1 +1,1 @@
-# opdex-docs.github.io
+# opdex.github.io
