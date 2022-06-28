@@ -20,4 +20,4 @@ Provide feedback on documentation and help the project build better! You can sug
 
 Join the community via our social media channels and reach out for additional integration assistance or technical questions about the project.
 
-[Discord](https://discord.gg/TnWVDTTrjf) \| [Twitter](https://twitter.com/OpdexProtocol) \| [Github](https://github.com/Opdex)
+[Discord](https://discord.gg/TnWVDTTrjf) \| [Twitter](https://twitter.com/OpdexProtocol) \| [GitHub](https://github.com/Opdex)

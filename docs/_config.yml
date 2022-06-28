@@ -19,12 +19,14 @@
 # in the templates via {{ site.myvariable }}.
 
 title: Opdex Docs
+logo: https://opdex.com/assets/full-logo.svg
 description: >- # this means to ignore newlines until "baseurl:"
   Learn all about Opdex Protocol, built on Stratis Platform
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "https://opdex-docs.github.io" # the base hostname & protocol for your site, e.g. http://example.com
 twitter_username: OpdexProtocol
 github_username:  Opdex
+color_scheme: dark
 
 # Build settings
 remote_theme: just-the-docs/just-the-docs
