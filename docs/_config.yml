@@ -21,7 +21,7 @@
 title: Opdex Docs
 description: >- # this means to ignore newlines until "baseurl:"
   Learn all about Opdex Protocol, built on Stratis Platform
-baseurl: "/docs" # the subpath of your site, e.g. /blog
+baseurl: "" # the subpath of your site, e.g. /blog
 url: "https://opdex-docs.github.io" # the base hostname & protocol for your site, e.g. http://example.com
 twitter_username: OpdexProtocol
 github_username:  Opdex
