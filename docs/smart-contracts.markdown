@@ -1,6 +1,7 @@
 ---
 layout: page
 title: Smart Contracts
+nav_order: 1
 ---
 
 ## Overview

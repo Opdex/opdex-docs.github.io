@@ -26,10 +26,16 @@ baseurl: "" # the subpath of your site, e.g. /blog
 url: "https://opdex.github.io" # the base hostname & protocol for your site, e.g. http://example.com
 twitter_username: OpdexProtocol
 github_username:  Opdex
-color_scheme: dark
 
 # Build settings
-remote_theme: just-the-docs/just-the-docs
+remote_theme: pdmosses/just-the-docs@combination
+
+# Theme
+callouts:
+  warning:
+    title: Warning
+    color: red
+color_scheme: dark
 
 # Exclude from processing.
 # The following items will not be processed, by default.
