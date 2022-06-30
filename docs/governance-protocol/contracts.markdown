@@ -13,11 +13,11 @@ The contract deployed by the bytecode below. Once deployed, allows the creator t
 
 ### Governance
 
-Governance is used to lock and distribute mined tokens to mining pools associated to nominated liquidity pools. [View Details](governance)
+Governance is used to lock and distribute mined tokens to mining pools, based on mining nominations. [View Details](governance)
 
 ### Vault
 
-The Vault is used lock tokens that are redeemable after a vesting period via vault certificates assigned to specific wallet addresses. [View Details](vault)
+The vault locks, vests and distributes tokens, by using a proposal voting process. [View Details](vault)
 
 ---
 

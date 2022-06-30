@@ -6,6 +6,9 @@ nav_order: 0
 
 ## 📝 Guides
 
+In Progress
+{: .label .label-yellow }
+
 Guides are resources used to explain developer documentation and user tutorials in detail. They are a common place to start to get to know Opdex.
 
 ## 🚦 API References

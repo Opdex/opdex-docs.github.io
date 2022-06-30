@@ -32,6 +32,9 @@ remote_theme: pdmosses/just-the-docs@combination
 
 # Theme
 callouts:
+  info:
+    title: Info
+    color: blue
   warning:
     title: Warning
     color: red
