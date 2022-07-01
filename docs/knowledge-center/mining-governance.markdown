@@ -2,7 +2,7 @@
 layout: page
 title: Mining Governance
 parent: Knowledge Center
-nav_order: 3
+nav_order: 8
 ---
 
 The mining governance smart contract receives a yearly ODX distribution, directly from the ODX token smart contract. These tokens are locked, only to be released for liquidity mining to the nominated mining pools. Each month, the top four liquidity pools by ODX staking weight will be nominated. At the beginning of the month, ODX will be distributed to their respective mining pools.

@@ -2,7 +2,7 @@
 layout: page
 title: ODX Governance Token
 parent: Knowledge Center
-nav_order: 2
+nav_order: 7
 ---
 
 The ODX token is the Opdex staking market governance token. ODX tokens are distributed directly to the vault and mining governance smart contracts where they are further distributed according to community action. The Vault contract distributes ODX tokens through proposals and certificates and the Mining Governance contract distributes ODX tokens through liquidity mining.

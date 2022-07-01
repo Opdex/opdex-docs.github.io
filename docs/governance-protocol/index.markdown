@@ -5,4 +5,4 @@ has_children: true
 nav_order: 4
 ---
 
-Learn how the Opdex governance contracts power the governance protocol.
+Learn the technical details about how the Opdex governance contracts power the governance protocol.

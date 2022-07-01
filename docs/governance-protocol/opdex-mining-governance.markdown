@@ -1,6 +1,6 @@
 ---
 layout: page
-title: Governance
+title: OpdexMiningGovernance
 parent: Governance Protocol
 nav_order: 2
 ---

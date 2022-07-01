@@ -9,15 +9,15 @@ nav_order: 0
 
 ### Mined Token
 
-The contract deployed by the bytecode below. Once deployed, allows the creator to initialize the first year of distribution and kicks off the public, yearly distribution schedule. Acts as the governance mined token and the core protocol staking token. [View Details](mined-token)
+The contract deployed by the bytecode below. Once deployed, allows the creator to initialize the first year of distribution and kicks off the public, yearly distribution schedule. Acts as the governance mined token and the core protocol staking token. [View Details](opdex-mined-token)
 
 ### Governance
 
-Governance is used to lock and distribute mined tokens to mining pools, based on mining nominations. [View Details](governance)
+Governance is used to lock and distribute mined tokens to mining pools, based on mining nominations. [View Details](opdex-mining-governance)
 
 ### Vault
 
-The vault locks, vests and distributes tokens, by using a proposal voting process. [View Details](vault)
+The vault locks, vests and distributes tokens, by using a proposal voting process. [View Details](opdex-vault)
 
 ---
 

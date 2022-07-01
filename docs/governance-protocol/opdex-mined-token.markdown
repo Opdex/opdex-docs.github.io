@@ -1,6 +1,6 @@
 ---
 layout: page
-title: Mined Token
+title: OpdexMinedToken
 parent: Governance Protocol
 nav_order: 1
 ---

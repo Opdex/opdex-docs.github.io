@@ -1,6 +1,6 @@
 ---
 layout: page
-title: Vault
+title: OpdexVault
 parent: Governance Protocol
 nav_order: 3
 ---
