@@ -4,12 +4,9 @@ title: Overview
 nav_order: 0
 ---
 
-## 📝 Guides
+## 👋 Start Learning
 
-In Progress
-{: .label .label-yellow }
-
-Guides are resources used to explain developer documentation and user tutorials in detail. They are a common place to start to get to know Opdex.
+Here you will find guides to start using Opdex, as well as more detailed technical documentation about the Opdex protocol.
 
 ## 🚦 API References
 
@@ -20,7 +17,7 @@ Guides are resources used to explain developer documentation and user tutorials 
 
 Provide feedback on documentation and help the project build better! You can suggest edits on any page to notify the team of content that has spelling errors, is incorrect, outdated or could be further elaborated on for clarity.
 
-## ✋ We're here to help!
+## ✋ We're Here to Help!
 
 Join the community via our social media channels and reach out for additional integration assistance or technical questions about the project.
 

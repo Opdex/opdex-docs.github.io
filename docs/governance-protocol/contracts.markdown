@@ -7,17 +7,25 @@ nav_order: 0
 
 ## Contracts
 
+[View CertiK Audit](https://www.certik.com/projects/opdex)
+
 ### Mined Token
 
-The contract deployed by the bytecode below. Once deployed, allows the creator to initialize the first year of distribution and kicks off the public, yearly distribution schedule. Acts as the governance mined token and the core protocol staking token. [View Details](opdex-mined-token)
+The contract deployed by the bytecode below. Once deployed, allows the creator to initialize the first year of distribution and kicks off the public, yearly distribution schedule. Acts as the governance mined token and the core protocol staking token.
+
+[GitHub](https://github.com/Opdex/opdex-governance/blob/main/src/Contracts/OpdexMinedToken.cs) \| [Reference](opdex-mined-token)
 
 ### Governance
 
-Governance is used to lock and distribute mined tokens to mining pools, based on mining nominations. [View Details](opdex-mining-governance)
+Governance is used to lock and distribute mined tokens to mining pools, based on mining nominations.
+
+[GitHub](https://github.com/Opdex/opdex-governance/blob/main/src/Contracts/OpdexMiningGovernance.cs) \| [Reference](opdex-mining-governance)
 
 ### Vault
 
-The vault locks, vests and distributes tokens, by using a proposal voting process. [View Details](opdex-vault)
+The vault locks, vests and distributes tokens, by using a proposal voting process.
+
+[GitHub](https://github.com/Opdex/opdex-governance/blob/main/src/Contracts/OpdexVault.cs) \| [Reference](opdex-vault)
 
 ---
 
