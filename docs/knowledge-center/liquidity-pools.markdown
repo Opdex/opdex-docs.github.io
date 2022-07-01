@@ -33,4 +33,4 @@ In staking markets, liquidity pools have added functionality to support governan
 
 Staking is the act of depositing governance tokens (ODX) to vote to enable liquidity mining for the pool. User's participating in staking will collect 0.05% of the total 0.3% of the pool's transaction fees.
 
-<!-- For more information, see [Staking](doc:knowledge-center-staking) -->
+For more information, see [Staking](staking)

@@ -9,10 +9,9 @@ The ODX token is the Opdex staking market governance token. ODX tokens are distr
 
 For more information on ODX tokens and their distribution view:
 
-<!-- - [Vault](doc:knowledge-center-vault) -->
-
-- [Mining Governance](mining-governance)
 - <a href="https://blog.opdex.com/introducing-odx-82ea356940e5" target="_blank">ODX Announcement</a>
+- [Mining Governance](mining-governance)
+- [Vault](vault)
 
 ---
 
@@ -20,7 +19,7 @@ For more information on ODX tokens and their distribution view:
 
 ODX tokens are used to stake within enabled liquidity pools. Staking participation helps vote for liquidity mining and participants will receive partial transaction fees.
 
-<!-- See [Staking](doc:knowledge-center-staking) for more details. -->
+See [Staking](staking) for more details.
 
 ---
 
@@ -28,4 +27,4 @@ ODX tokens are used to stake within enabled liquidity pools. Staking participati
 
 ODX tokens can be mined through liquidity mining in select pools on a monthly basis. Providers of mining enabled liquidity pools can use their OLPT to mine for new ODX tokens.
 
-<!-- See [Mining](doc:knowledge-center-mining) for more details. -->
+See [Mining](mining) for more details.
