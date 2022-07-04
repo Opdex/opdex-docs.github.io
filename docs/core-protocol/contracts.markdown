@@ -13,31 +13,35 @@ nav_order: 0
 
 The contract deployed by the bytecode below. Once deployed, allows the owner to create Market Staking and Standard markets with an associated router.
 
-[GitHub](https://github.com/Opdex/opdex-v1-core/blob/main/src/Contracts/Deployer/OpdexMarketDeployer.cs) <!--- \| [Reference](opdex-market-deployer) -->
-
-### Market
-
-Deployed from within a Market Deployer. Markets manage groups of liquidity pools and have associated Router smart contracts. Markets can be either staking or standard types.
-
-[GitHub](https://github.com/Opdex/opdex-v1-core/tree/main/src/Contracts/Markets) <!--- \| [Reference](opdex-market) -->
+[GitHub](https://github.com/Opdex/opdex-v1-core/blob/main/src/Contracts/Deployer/OpdexMarketDeployer.cs) \| [Reference](opdex-market-deployer)
 
 ### Market Router
 
 The Router contract is used for routing transactions for quotes, swaps, liquidity additions and liquidity removals. Is used as an entry point for multi-step transactions to be handled in a single transaction.
 
-[GitHub](https://github.com/Opdex/opdex-v1-core/blob/main/src/Contracts/Routers/OpdexRouter.cs) <!--- \| [Reference](opdex-market-router) -->
+[GitHub](https://github.com/Opdex/opdex-v1-core/blob/main/src/Contracts/Routers/OpdexRouter.cs) \| [Reference](opdex-market-router)
+
+### Market
+
+Deployed from within a Market Deployer. Markets manage groups of liquidity pools and have associated Router smart contracts. Markets can be either staking or standard types.
+
+- Base Market - [GitHub](https://github.com/Opdex/opdex-v1-core/tree/main/src/Contracts/Markets/OpdexMarket.cs) \| [Reference](opdex-market)
+- Staking Market - [GitHub](https://github.com/Opdex/opdex-v1-core/tree/main/src/Contracts/Markets/OpdexStakingMarket.cs) \| [Reference](opdex-staking-market)
+- Standard Market - [GitHub](https://github.com/Opdex/opdex-v1-core/tree/main/src/Contracts/Markets/OpdexStandardMarket.cs) \| [Reference](opdex-standard-market)
 
 ### Liquidity Pool
 
 Liquidity pools are used for swapping and lending tokens. Liquidity providers deposit tokens to collect transaction fees and traders swap or borrow tokens against the existing liquidity.
 
-[GitHub](https://github.com/Opdex/opdex-v1-core/tree/main/src/Contracts/Pools) <!--- \| [Reference](opdex-liquidity-pool) -->
+- Base Liquidity Pool - [GitHub](https://github.com/Opdex/opdex-v1-core/tree/main/src/Contracts/Pools/OpdexLiquidityPool.cs) \| [Reference](opdex-liquidity-pool)
+- Staking Liquidity Pool - [GitHub](https://github.com/Opdex/opdex-v1-core/tree/main/src/Contracts/Pools/OpdexStakingPool.cs) \| [Reference](opdex-staking-pool)
+- Standard Liquidity Pool - [GitHub](https://github.com/Opdex/opdex-v1-core/tree/main/src/Contracts/Pools/OpdexStandardPool.cs) \| [Reference](opdex-standard-pool)
 
 ### Mining Pool
 
 Mining pools are deployed alongside staking pools in staking markets. These pools are activated by the Governance smart contract and used to mine for new staking tokens.
 
-[GitHub](https://github.com/Opdex/opdex-v1-core/blob/main/src/Contracts/Pools/OpdexMiningPool.cs) <!--- \| [Reference](opdex-mining-pool) -->
+[GitHub](https://github.com/Opdex/opdex-v1-core/blob/main/src/Contracts/Pools/OpdexMiningPool.cs) \| [Reference](opdex-mining-pool)
 
 ---
 
