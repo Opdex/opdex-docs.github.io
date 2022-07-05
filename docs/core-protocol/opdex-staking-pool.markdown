@@ -47,6 +47,195 @@ public OpdexStakingPool(ISmartContractState state,
 
 ---
 
+## Properties
+
+| Type | Property | Description |
+| `Address` | StakingToken | The address of the pool's staking token. |
+| `Address` | MiningPool | The mining pool associated with this staking pool contract. |
+| `UInt256` | TotalStaked | The total amount of staked tokens. |
+| `UInt256` | StakingRewardsBalance | The balance of liquidity pool tokens to be collected by stakers. |
+| `UInt256` | ApplicableStakingRewards | The latest fees that haven't been accounted for when calculating reward per staked token. |
+| `UInt256` | RewardPerStakedTokenLast | The amount of liquidity pool token rewards per full token staked from the last time any staker executed a staking action. |
+
+---
+
+## Methods
+
+### Get Stored Reward Per Staked Token
+
+Retrieves the last calculated reward per staked token stored during the last action executed by the staker.
+
+```csharp
+public UInt256 GetStoredRewardPerStakedToken(Address staker);
+```
+
+#### Parameters
+
+| Type | Property | Description |
+| `Address` | staker | The address of the staker. |
+
+#### Returns
+
+| Type | Property | Description |
+| `UInt256` | amount | The amount of rewards per staked token from the last action taken by the staker. |
+
+---
+
+### Get Stored Reward
+
+Retrieves the last calculated reward per staked token stored during the last action executed by the staker.
+
+```csharp
+public UInt256 GetStoredReward(Address staker);
+```
+
+#### Parameters
+
+| Type | Property | Description |
+| `Address` | staker | The address of the staker. |
+
+#### Returns
+
+| Type | Property | Description |
+| `UInt256` | amount | The last calculated reward amount for the staker. |
+
+---
+
+### Get Reward Per Staked Token
+
+Retrieves the current reward per full token staked based on the most recent calculation of total staking pool rewards.
+
+```csharp
+public UInt256 GetRewardPerStakedToken();
+```
+
+#### Returns
+
+| Type | Property | Description |
+| `UInt256` | amount | The amount of rewarded tokens per full staked token. |
+
+---
+
+### Get Staked Balance
+
+Retrieves the amount of tokens staked for an address.
+
+```csharp
+public UInt256 GetStakedBalance(Address staker);
+```
+
+#### Parameters
+
+| Type | Property | Description |
+| `Address` | staker | The address of the staker to check the balance of. |
+
+#### Returns
+
+| Type | Property | Description |
+| `UInt256` | amount | The amount of staked tokens. |
+
+---
+
+### Get Staking Rewards
+
+Retrieves the amount of earned rewards based on the most recent calculation of total staking pool rewards.
+
+```csharp
+public UInt256 GetStakingRewards(Address staker);
+```
+
+#### Parameters
+
+| Type | Property | Description |
+| `Address` | staker | The address of the staker to check the reward balance of. |
+
+#### Returns
+
+| Type | Property | Description |
+| `UInt256` | amount | The amount of earned rewards. |
+
+---
+
+### Start Staking
+
+Stakes tokens in a liquidity pool. Users must have an approved allowance of the amount they wish to stake.
+
+Using the `TransferFrom` IStandardToken256 method implementation, the users allowance is sent to the liquidity pool for staking.
+
+Staking in a liquidity pool makes a call to the staking token and mining governance contracts to nominate the liquidity pool for mining, recording the pool's updated staking weight.
+
+```csharp
+public void StartStaking(UInt256 amount);
+```
+
+#### Parameters
+
+| Type | Property | Description |
+| `UInt256` | amount | The amount of tokens to stake. |
+
+---
+
+### Collect Staking Rewards
+
+Collects earned staking rewards while continuing to stake.
+
+By setting the `liquidate` parameter to true, earned liquidity pool tokens will be burned in the same transaction, returning an equal ratio of the pool's reserve tokens.
+
+```csharp
+public void CollectStakingRewards(bool liquidate);
+```
+
+#### Parameters
+
+| Type | Property | Description |
+| `bool` | liquidate | When true, liquidates earned LP tokens in exchange for an equal ratio of the pool's reserve tokens. |
+
+---
+
+### Stop Staking
+
+Stops staking in the liquidity pool. The staker's tokens are returned and earned rewards are collected in the form of LP tokens.
+
+Exiting the staking pool makes a call to the staking token and mining governance contracts to nominate the liquidity pool for mining, recording the pool's updated staking weight.
+
+By setting the `liquidate` parameter to true, earned liquidity pool tokens will be burned in the same transaction, returning an equal ratio of the pool's reserve tokens.
+
+```csharp
+public void StopStaking(UInt256 amount, bool liquidate);
+```
+
+#### Parameters
+
+| Type | Property | Description |
+| `UInt256` | amount | The amount of tokens to stop staking with. |
+| `bool` | liquidate | When true, liquidates earned LP tokens in exchange for an equal ratio of the pool's reserve tokens. |
+
+---
+
+## Logs
+
+### Stake Log
+
+Emitted when a user starts or stops staking tokens.
+
+| Index | Type | Property | Description |
+| ✅ | `Address` | Staker | The address of the staker. |
+| ✅ | `byte` | EventType | 1 for start staking, 2 for stop staking. |
+| ❎ | `UInt256` | Amount | The amount of tokens staked or withdrawn. |
+| ❎ | `UInt256` | TotalStaked | The total amount of tokens being staked in the pool. |
+
+---
+
+### Collect Staking Rewards Log
+
+Emitted when a user collects liquidity pool token staking rewards.
+
+| Index | Type | Property | Description |
+| ✅ | `Address` | Staker | The address of the staker collecting rewards from the pool. |
+| ❎ | `UInt256` | Reward | The amount of rewarded liquidity pool tokens collected by the staker. |
+
+---
+
 ## References
 
 #### OpdexLiquidityPool Smart Contract - <a href="https://github.com/Opdex/opdex-v1-core/blob/main/src/Contracts/Pools/OpdexLiquidityPool.cs" target="_blank">Github</a>

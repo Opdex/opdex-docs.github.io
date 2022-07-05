@@ -45,6 +45,16 @@ public OpdexStandardPool(ISmartContractState state,
 
 ---
 
+## Properties
+
+| Type | Property | Description |
+| `Address` | Market | The address of the market the pool is assigned to. |
+| `bool` | AuthProviders | Flag describing whether `Mint`, `Burn`, `Sync`, or `Skim` transactions are authorized or not. |
+| `bool` | AuthTraders | Flag describing whether `Swap` transactions are authorized or not. |
+| `bool` | MarketFeeEnabled | Flag indicating if the market owner collects 1/6 of all transaction fees. |
+
+---
+
 ## References
 
 #### OpdexLiquidityPool Smart Contract - <a href="https://github.com/Opdex/opdex-v1-core/blob/main/src/Contracts/Pools/OpdexLiquidityPool.cs" target="_blank">Github</a>
