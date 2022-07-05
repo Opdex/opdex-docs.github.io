@@ -128,6 +128,8 @@ public void ClaimPendingOwnership();
 
 Emitted when a new market is created.
 
+#### Properties
+
 | Index | Type | Property | Description |
 | ✅ | `Address` | Market | The address of the created market smart contract. |
 | ✅ | `Address` | Owner | The address set as the owner of the created market. |
@@ -144,6 +146,8 @@ Emitted when a new market is created.
 ### Change Deployer Owner Log
 
 Emitted when a the owner of the market deployer contract changes.
+
+#### Properties
 
 | Index | Type | Property | Description |
 | ✅ | `Address` | From | The address of the old market deployer owner. |
