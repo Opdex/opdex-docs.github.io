@@ -34,6 +34,239 @@ public OpdexMiningPool(ISmartContractState state,
 
 ---
 
+## Properties
+
+| Type | Property | Description |
+| `Address` | MiningGovernance | The address of the governance contract responsible for distributing tokens to be mined. |
+| `Address` | StakingToken | The contract address of the liquidity pool token used for mining. |
+| `Address` | MinedToken | The contract address of the token being mined. |
+| `ulong` | MiningPeriodEndBlock | The end block of the mining period. |
+| `UInt256` | RewardRate | The amount of tokens mined per block. |
+| `ulong` | MiningDuration | The number of blocks mining is scheduled for. |
+| `ulong` | LastUpdateBlock | The last block where a transaction occurred causing reward rate calculations. |
+| `UInt256` | RewardPerStakedTokenLast | The latest calculated amount of rewards per full liquidity pool token used for mining from the last time any miner executed a mining action. |
+| `UInt256` | TotalSupply | The total supply of liquidity pool tokens currently mining. |
+| `bool` | Locked | Contract reentrancy locked status. |
+
+---
+
+## Methods
+
+### Get Stored Reward Per Staked Token
+
+Retrieves the last calculated reward per full liquidity pool token for the provided address from the last action executed by the miner.
+
+```csharp
+public UInt256 GetStoredRewardPerStakedToken(Address miner);
+```
+
+#### Parameters
+
+| Type | Property | Description |
+| `Address` | miner | The miner's address. |
+
+#### Returns
+
+| Type | Property | Description |
+| `UInt256` | amount | The last calculated amount of tokens earned per liquidity pool token used for mining. |
+
+---
+
+### Get Stored Reward
+
+Retrieves the last calculated reward amount from state for a provided address.
+
+```csharp
+public UInt256 GetStoredReward(Address miner);
+```
+
+#### Parameters
+
+| Type | Property | Description |
+| `Address` | miner | The address of the miner to check the rewards for. |
+
+#### Returns
+
+| Type | Property | Description |
+| `UInt256` | reward | The number of earned tokens from mining. |
+
+---
+
+### Get Balance
+
+Returns the balance of liquidity pool tokens used for mining from a provided address.
+
+```csharp
+public UInt256 GetBalance(Address miner);
+```
+
+#### Parameters
+
+| Type | Property | Description |
+| `Address` | miner | The address of the miner to check the balance of. |
+
+#### Returns
+
+| Type | Property | Description |
+| `UInt256` | balance | The miner's balance of liquidity pool tokens used for mining. |
+
+---
+
+### Latest Block Applicable
+
+Returns either the current block number or the last block of the mining period, whichever is less.
+
+```csharp
+public ulong LatestBlockApplicable();
+```
+
+#### Returns
+
+| Type | Property | Description |
+| `ulong` | latestBlockApplicable | The latest applicable block number. |
+
+---
+
+### Get Reward For Duration
+
+Calculates the total tokens being distributed for the current mining period.
+
+```csharp
+public UInt256 GetRewardForDuration();
+```
+
+#### Returns
+
+| Type | Property | Description |
+| `UInt256` | reward | The number of tokens distributed throughout the entire current mining period. |
+
+---
+
+### Get Reward Per Staked Token
+
+Calculates and returns the current rewards per full liquidity pool token used to mine.
+
+```csharp
+public UInt256 GetRewardPerStakedToken();
+```
+
+#### Returns
+
+| Type | Property | Description |
+| `UInt256` | reward | Amount of earnings per token used to mine based on the current state of the pool. |
+
+---
+
+### Get Mining Rewards
+
+Calculates and returns the current amount of mined tokens earned by the miner.
+
+```csharp
+public UInt256 GetMiningRewards(Address miner);
+```
+
+#### Parameters
+
+| Type | Property | Description |
+| `Address` | miner | The miner's address to check earned rewards for. |
+
+#### Returns
+
+| Type | Property | Description |
+| `UInt256` | reward | The amount of tokens earned through mining. |
+
+---
+
+### Start Mining
+
+Using an allowance, transfer liquidity pool tokens to mine with for rewarded tokens.
+
+```csharp
+public void StartMining(UInt256 amount);
+```
+
+#### Parameters
+
+| Type | Property | Description |
+| `UInt256` | amount | The amount of liquidity pool tokens to mine with, requires an allowance approval. |
+
+---
+
+### Collect Mining Rewards
+
+Collects and transfers earned rewards to miner while continuing to mine.
+
+```csharp
+public void CollectMiningRewards();
+```
+
+---
+
+### Stop Mining
+
+Withdraws the specified amount of liquidity pool tokens mining and collects rewards.
+
+```csharp
+public void StopMining(UInt256 amount);
+```
+
+#### Parameters
+
+| Type | Property | Description |
+| `UInt256` | amount | The amount of tokens to withdraw from the mining pool. |
+
+---
+
+### Notify Reward Amount
+
+Hook used to notify this mining pool of rewarded funding. Sets reward rates and mining periods.
+
+```csharp
+public void NotifyRewardAmount(UInt256 reward);
+```
+
+#### Parameters
+
+| Type | Property | Description |
+| `UInt256` | reward | The amount of tokens rewarded to the mining pool for mining. |
+
+---
+
+## Logs
+
+### Mine Log
+
+Emitted when a user starts or stops mining.
+
+| Index | Type | Property | Description |
+| ✅ | `Address` | Miner | The address of the miner. |
+| ✅ | `byte` | EventType | Either 1 for Start Mining or 2 for Stop Mining. |
+| ❎ | `UInt256` | Amount | The amount of liquidity pool tokens being added or withdrawn. |
+| ❎ | `UInt256` | TotalSupply | The total amount of tokens mining in the pool. |
+
+---
+
+### Collect Mining Rewards Log
+
+Emitted when a miner collects earned rewards.
+
+| Index | Type | Property | Description |
+| ✅ | `Address` | Miner | The address of the miner collecting rewards. |
+| ❎ | `UInt256` | Amount | The amount of collected rewards. |
+
+---
+
+### Enable Mining Log
+
+Emitted when a mining pool is notified of newly rewarded tokens to enable or continue mining.
+
+| Index | Type | Property | Description |
+| ❎ | `UInt256` | Amount | The amount of received tokens to be mined. |
+| ❎ | `UInt256` | RewardRate | The amount of tokens to be mined per block. |
+| ❎ | `ulong` | MiningPeriodEndBlock | The block height identifying when the mining period will end. |
+
+---
+
 ## References
 
 #### OpdexMiningPool Smart Contract - <a href="https://github.com/Opdex/opdex-v1-core/blob/main/src/Contracts/Pools/OpdexMiningPool.cs" target="_blank">Github</a>
