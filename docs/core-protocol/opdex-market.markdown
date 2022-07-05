@@ -24,6 +24,72 @@ protected OpdexMarket(ISmartContractState state, uint transactionFee) : base(sta
 
 ---
 
+## Properties
+
+| Type | Property | Description |
+| `uint` | TransactionFee | The staking market transaction fee set at 3 equal to 0.3%. |
+
+---
+
+## Methods
+
+### Get Pool
+
+Retrieve a pool's contract address by the SRC20 token associated.
+
+```csharp
+public Address GetPool(Address token);
+```
+
+#### Parameters
+
+| Type | Property | Description |
+| `Address` | token | The address of the SRC token. |
+
+#### Returns
+
+| Type | Property | Description |
+| `Address` | pool | The address of the requested pool. |
+
+---
+
+### Create Pool
+
+Creates a new liquidity pool for the provided token with 0 liquidity if it doesn't already exist.
+
+{: .info }
+Some standard markets may have authorization implemented on this method requiring address whitelisting.
+
+```csharp
+public Address CreatePool(Address token);
+```
+
+#### Parameters
+
+| Type | Property | Description |
+| `Address` | token | The address of the SRC token. |
+
+#### Returns
+
+| Type | Property | Description |
+| `Address` | pool | The address of the created pool. |
+
+---
+
+## Logs
+
+### Create Liquidity Pool Log
+
+Emitted when a new liquidity pool is created.
+
+#### Properties
+
+| Index | Type | Property | Description |
+| ✅ | `Address` | Token | The address of the SRC token in the liquidity pool. |
+| ✅ | `Address` | Pool | The address of the new liquidity pool smart contract. |
+
+---
+
 ## References
 
 #### OpdexMarket Smart Contract - <a href="https://github.com/Opdex/opdex-v1-core/blob/main/src/Contracts/Markets/OpdexMarket.cs" target="_blank">Github</a>
