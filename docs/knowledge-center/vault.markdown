@@ -9,7 +9,7 @@ The vault is a part of the governance protocol, allowing CRS token holders to de
 
 Governance tokens locked within the vault can only be released through successful proposals to create new certificates.
 
-See [Proposals](doc:knowledge-center-vault-proposals) and [Certificates](doc:knowledge-center-vault-certificates) for more details.
+See [proposals](proposals) and [certificates](certificates) for more details.
 
 | Year | Amount (ODX) | Cumulative Total (ODX) |
 | 1 | 100,000,000 | 100,000,000 |
