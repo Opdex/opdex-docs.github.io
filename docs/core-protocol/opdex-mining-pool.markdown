@@ -234,15 +234,27 @@ public void NotifyRewardAmount(UInt256 reward);
 
 ## Logs
 
-### Mine Log
+### Start Mining Log
 
-Emitted when a user starts or stops mining.
+Emitted when a user starts mining.
 
 | Index | Type | Property | Description |
 | ✅ | `Address` | Miner | The address of the miner. |
-| ✅ | `byte` | EventType | Either 1 for Start Mining or 2 for Stop Mining. |
-| ❎ | `UInt256` | Amount | The amount of liquidity pool tokens being added or withdrawn. |
+| ❎ | `UInt256` | Amount | The amount of liquidity pool tokens being added. |
 | ❎ | `UInt256` | TotalSupply | The total amount of tokens mining in the pool. |
+| ❎ | `UInt256` | MinerBalance | Updated balance of the miner in the pool. |
+
+---
+
+### Stop Mining Log
+
+Emitted when a user stops mining.
+
+| Index | Type | Property | Description |
+| ✅ | `Address` | Miner | The address of the miner. |
+| ❎ | `UInt256` | Amount | The amount of liquidity pool tokens being withdrawn. |
+| ❎ | `UInt256` | TotalSupply | The total amount of tokens mining in the pool. |
+| ❎ | `UInt256` | MinerBalance | Updated balance of the miner in the pool. |
 
 ---
 

@@ -214,15 +214,27 @@ public void StopStaking(UInt256 amount, bool liquidate);
 
 ## Logs
 
-### Stake Log
+### Start Staking Log
 
-Emitted when a user starts or stops staking tokens.
+Emitted when a user starts staking tokens.
 
 | Index | Type | Property | Description |
 | ✅ | `Address` | Staker | The address of the staker. |
-| ✅ | `byte` | EventType | 1 for start staking, 2 for stop staking. |
-| ❎ | `UInt256` | Amount | The amount of tokens staked or withdrawn. |
+| ❎ | `UInt256` | Amount | The amount of tokens added to the staking position. |
 | ❎ | `UInt256` | TotalStaked | The total amount of tokens being staked in the pool. |
+| ❎ | `UInt256` | StakerBalance | Updated staking balance for the staker. |
+
+---
+
+### Stop Staking Log
+
+Emitted when a user stops staking tokens.
+
+| Index | Type | Property | Description |
+| ✅ | `Address` | Staker | The address of the staker. |
+| ❎ | `UInt256` | Amount | The amount of tokens removed from the staking position. |
+| ❎ | `UInt256` | TotalStaked | The total amount of tokens being staked in the pool. |
+| ❎ | `UInt256` | StakerBalance | Updated staking balance for the staker. |
 
 ---
 
