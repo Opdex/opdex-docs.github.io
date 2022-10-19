@@ -8,16 +8,26 @@ nav_order: 0
 
 Here you will find guides to start using Opdex, as well as more detailed technical documentation about the Opdex protocol.
 
+## 💬 Smart Contracts
+
+Start learning about Opdex smart contracts at the protocol level. Smart contracts are separated into two repositories.
+
+### Core Protocol
+
+The core protocol consists of required contracts for markets, liquidity pools and routers. [Read More](core-protocol)
+
+### Governance Protocol 
+
+The governance protocol consists of contracts making up the ODX token, mining governance and vault smart contracts. [Read More](governance-protocol)
+
 ## 🚦 API References
 
-- [Opdex V1 Platform API (Swagger)](https://v1-api.opdex.com/swagger/index.html)
-- [Opdex Auth API (Swagger)](https://auth-api.opdex.com/swagger/index.html)
+Opdex APIs can be hosted to add additional functionality to the web based UI.
 
-## 💬 Provide Feedback
+- [Opdex V1 Platform API](platform-api)
+- [Opdex Auth API](auth-api)
 
-Provide feedback on documentation and help the project build better! You can suggest edits on any page to notify the team of content that has spelling errors, is incorrect, outdated or could be further elaborated on for clarity.
-
-## ✋ We're Here to Help!
+## ✋ Join the Community
 
 Join the community via our social media channels and reach out for additional integration assistance or technical questions about the project.
 
