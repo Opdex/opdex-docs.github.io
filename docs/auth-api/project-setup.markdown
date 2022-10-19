@@ -56,9 +56,9 @@ Create your environment secrets file using `dotnet user-secrets set <key> <value
 ```json
 {
     "Authority": "auth-api.opdex.com",
-    "Azure:SignalR:ConnectionString": "Endpoint=https://ws-opdex.service.signalr.net;AccessKey=1468d92882f6499797735a9d5c07ae562NeZvQHH7lN=;Version=1.0;",
+    "Azure:SignalR:ConnectionString": "Endpoint=<signalr-endpoint>;AccessKey=<access-key>;Version=1.0;",
     "Cirrus:ApiUrl": "https://cirrus.opdex.com",
-    "Database:ConnectionString": "Server=sql-opdex.mysql.database.azure.com; Port=3306; Database=auth; Uid=auth@sql-opdex; Pwd=abcdefg;",
+    "Database:ConnectionString": "Server=<server>; Port=3306; Database=<db-name>; Uid=<id>; Pwd=<pwd>",
     "Encryption:Key": "H,|!<8X(EfBb(}KT",
     "IpRateLimiting:IpWhitelist:1": "192.168.0.1",
     "Jwt:SigningKeyName": "opdex",
