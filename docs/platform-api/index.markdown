@@ -46,3 +46,7 @@ Any decimal numbers passed into a request must be passed as a string. Decimal nu
 ## Date and Time
 
 All date and time data uses ISO-8601 as a formatting standard. Date and time data sent in a request should specify the offset, otherwise it will be assumed that the time zone is UTC. For example, if you wish to specify a time of `2022-01-01 06:00:00 PST`, you can format this as `2022-01-01T06:00:00-08:00`. All date and time data that is returned is UTC and will be expressed as such.
+
+## Swagger
+
+A list of available endpoints, requests and responses are documented within `/swagger` of the running API.

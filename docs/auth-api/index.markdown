@@ -30,3 +30,7 @@ It is possible to perform machine-to-machine authentication using the custom [si
 ## Integrating a Wallet
 
 Any Cirrus wallet software can act as an OAuth2 resource owner and be used to authenticate users for all OAuth2 clients, by implementing [SSAS](https://github.com/Opdex/SSAS). The implementation relies on a standard HTTP callback at `/ssas/callback` which may be directed to the Opdex Auth API.
+
+## Swagger
+
+A list of available endpoints, requests and responses are documented within `/swagger` of the running API.
