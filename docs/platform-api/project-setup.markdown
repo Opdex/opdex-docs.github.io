@@ -15,7 +15,7 @@ Get started setting up your Opdex Platform API environment.
 
 The Platform API uses MySql v8.0 databases for its operations. This can be setup locally or hosted.
 
-Schema and scripts for database management can be found in the [Opdex V1 Db Repository](https://github.com/opdex/opdex-v1-db)
+Schema and scripts for database management can be found in the [Opdex V1 DB Repository](https://github.com/opdex/opdex-v1-db)
 
 ### Cirrus Full Node
 
@@ -115,3 +115,17 @@ Create your environment secrets file using `dotnet user-secrets set <key> <value
   "OpdexConfiguration:WalletTransactionCallback": "/transactions"
 }
 ```
+
+---
+
+## Indexing
+
+The Platform API indexes Opdex related transactional data while also serving indexed data back to consumers.
+
+To initiate the indexing, a fresh database must be available that is unpopulated other than data instantiated via creation scripts.
+
+**POST/** to `indexer/resync-from-deployment` as an admin and provide the applicabale transaction hashes to kick off the indexing process. 
+
+- *Make sure that the `index_lock.Available` databse column is set to `true` to allow indexing, `false` will pause indexing.*
+- *This may take a while to sync from deployment to chain tip.*
+- *Coin Market Cap and Coin Gecko rate limits will affect sync times.*
