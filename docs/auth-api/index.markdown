@@ -25,8 +25,8 @@ You can connect users to your dApp by using the authorization code PKCE grant. T
 
 ### Machine to Machine (M2M)
 
-It is possible to perform machine-to-machine authentication using the custom [sid grant](https://docs.opdex.com/page/oauth-sid-grant-flow). Common use cases for this include authenticating a daemon/service, bot or IoT device. The requirement for this is that the application being integrated is able to sign messages with their Cirrus wallet, ideally using their own node.
+It is possible to perform machine-to-machine authentication using the custom [sid grant](oauth-sid-grant-flow). Common use cases for this include authenticating a daemon/service, bot or IoT device. The requirement for this is that the application being integrated is able to sign messages with their Cirrus wallet, ideally using their own node.
 
 ## Integrating a Wallet
 
-Any Cirrus wallet software can act as an OAuth2 resource owner and be used to authenticate users for all OAuth2 clients, by implementing [SSAS](https://github.com/Opdex/SSAS). The implementation relies on a standard [HTTP callback](https://docs.opdex.com/reference/ssas) which may be directed to the Opdex Auth API.
+Any Cirrus wallet software can act as an OAuth2 resource owner and be used to authenticate users for all OAuth2 clients, by implementing [SSAS](https://github.com/Opdex/SSAS). The implementation relies on a standard HTTP callback at `/ssas/callback` which may be directed to the Opdex Auth API.
