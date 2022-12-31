@@ -28,9 +28,7 @@ twitter_username: OpdexProtocol
 github_username:  Opdex
 
 # Build settings
-# remote_theme: pdmosses/just-the-docs@combination
 remote_theme: pmarsceill/just-the-docs
-# theme: just-the-docs
 
 # Theme
 callouts:
