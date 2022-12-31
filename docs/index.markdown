@@ -12,6 +12,8 @@ Here you will find guides to start using Opdex, as well as more detailed technic
 
 Start learning about Opdex smart contracts at the protocol level. Smart contracts are separated into two repositories.
 
+[View Audits](https://www.certik.org/projects/opdex)
+
 ### Core Protocol
 
 The core protocol consists of required contracts for markets, liquidity pools and routers. [Read More](core-protocol)
