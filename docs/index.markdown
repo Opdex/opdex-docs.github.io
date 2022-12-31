@@ -4,9 +4,21 @@ title: Overview
 nav_order: 0
 ---
 
-## 👋 Start Learning
+## 👋 Get Started
 
 Here you will find guides to start using Opdex, as well as more detailed technical documentation about the Opdex protocol.
+
+### Start Using
+
+Opdex Desktop is a downloadable program supporting Windows, Mac and Linux. The program reads data directly from the Cirrus blockchain while the user runs Cirrus Core, the official wallet of the Cirrus Chain.
+
+Opdex desktop does not use or store any private information, instead, it will build QR codes that can be used within Cirrus Core to build and submit desired transactions while keeping all private data hidden from Opdex Desktop.
+
+[Download](https://github.com/opdex/opdex-desktop/releases)
+
+### Start Learning
+
+Continue on to find more detailed technical documentation related to the Opdex protocols.
 
 ## 💬 Smart Contracts
 
