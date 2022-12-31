@@ -28,7 +28,11 @@ twitter_username: OpdexProtocol
 github_username:  Opdex
 
 # Build settings
-remote_theme: pdmosses/just-the-docs@combination
+# remote_theme: pdmosses/just-the-docs@combination
+
+# Plugins
+plugins:
+  - jekyll-default-layout
 
 # Theme
 callouts:
