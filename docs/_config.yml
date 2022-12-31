@@ -30,9 +30,7 @@ github_username:  Opdex
 # Build settings
 # remote_theme: pdmosses/just-the-docs@combination
 
-# Plugins
-# plugins:
-#   - jekyll-default-layout
+theme: just-the-docs
 
 # Theme
 callouts:
