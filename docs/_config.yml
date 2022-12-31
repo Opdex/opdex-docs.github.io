@@ -30,7 +30,7 @@ github_username:  Opdex
 # Build settings
 # remote_theme: pdmosses/just-the-docs@combination
 
-theme: just-the-docs
+# theme: just-the-docs
 
 # Theme
 callouts:
